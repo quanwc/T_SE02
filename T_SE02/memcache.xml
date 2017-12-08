@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<memcaches version="1">   
+    <memcache type="AAAA">   
+	    <ip>11.11.1.244:11211</ip>   
+	    <prefix>aaaa_</prefix>   
+    </memcache> 
+      
+	<memcache type="BBBB">   
+		<ip>11.22.1.243:11211</ip>   
+		<prefix>bbbb_</prefix>   
+	</memcache>   
+	 
+	<memcache type="CCCC">   
+		<ip>11.33.33.152:11211</ip>   
+		<prefix>cccc_</prefix>  
+	</memcache>   
+	
+	<memcache type="DDDD">   
+		<ip>11.44.15.244:11211</ip>   
+		<prefix>dddd_</prefix>   
+	</memcache>   
+
+	<memcache type="EEEEEEE">   
+		<ip>11.66.16.152:11211</ip>   
+		<prefix>eeeee_</prefix>   
+	</memcache>   
+  
+</memcaches>  

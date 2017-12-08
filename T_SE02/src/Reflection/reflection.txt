@@ -1,0 +1,52 @@
+反射：
+
+一：Class类型
+	1.创建对象的方式：class属性、对象.getClass()方法
+	2.Class是类类型，封装了类的信息的一种特殊类型
+	3.动态加载类信息： Class.forName("java.lang.String");
+	4.在.NET，C#语言中，Assembly与java中的Class等价
+二：什么是反射
+	1.反射：运行时动态获取类的内部信息的一种方式
+	2.反射是java语言的一种特性，c，c++语言就不具备这种特性
+	3.自审：运行时自己查看自己信息的方式叫自身
+	4.反射的典型应用： IDE的提示(自己写的类，MyEclipse会有自动提示功能，底层就是反射)
+				  javaBean的拷贝
+				     简单工厂
+三：Field类型：
+		描述了类里面的属性的一种类型
+	1.获取所有属性：getDeclaredFields()
+	2.获取指定属性：getDeclaredField("fieldName")
+	3.获取属性的值：field.get("对象的引用")
+	4.为属性赋值： field.set(对象，值)
+	5.Modifier：用于存储等级信息(private、protected、public修饰符)的类型
+	  f.getModifiers():返回值是一个整数值，每一个整数值对应具体的private、protected等
+	  Modifier.toString(f.getModifiers()): 将给定整数值对应的字符串输出				     
+				     
+四：Method类型：
+	1.获取所有的方法对象：getDeclaredMethods()
+	2.获取某一个方法对象：getDeclaredMethod("name")
+	3.调用方法： method.invoke(obj, values...)
+	4.如果方法有返回值:
+		Object result = m.invoke(o, new Object[]{})
+	5.获取方法的参数类型：getParameterTypes()			  
+
+五：JavaBean拷贝：
+	1.什么是JavaBean：
+		一种java类，重用的组件，符合一定的设计规范。
+	2.符合的规范如下：
+		·公开(public)且完整的类(不能有抽象未完成的方法)
+		·所有的属性需要隐藏(private)
+		·提供公共的可访问私有属性的途径(getXXX、setXXX)
+		·布尔类型的属性命名时把get/set换成is
+		·一定要提供一个无参的构造器
+	3.JavaBean拷贝的意义：
+		  在系统分层时，能够保证不同层之间传递对象的方便性。
+六：面试：
+	1.什么是反射？
+		运行时动态获取类的内部信息的一种方式
+	2.反射用到的类有哪些？
+		Class、Field、Method、Constructor
+	3.反射能做什么？
+		动态生成对象、JavaBean的拷贝。
+	4.反射的典型应用？
+		IDE(MyEclipse)打点提示、框架的底层(Spring、Hibernate)
